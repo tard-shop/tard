@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحة الادمن</title>
+    <link rel="icon" href="logo.jpg" type="image/png">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(50deg, #120b1a, #ff0000);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .tile {
+            background-color: #fff;
+            width: 250px;
+            height: 200px;
+            border-radius: 15px;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            cursor: pointer;
+            overflow: hidden;
+        }
+
+        .tile img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            margin-bottom: 15px;
+        }
+
+        .tile h3 {
+            font-size: 18px;
+            color: #000;
+            margin: 0;
+            text-align: center;
+        }
+
+        .tile:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+
+        .popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .popup iframe {
+            width: 90%;
+            height: 90%;
+            border: none;
+        }
+
+        .popup .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #ff16de;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<h2 style="color: white;">صفحة الادمن الخاصة بالسوبر ليدر مصطفي</h2>
+
+
+
+
+
+
+
+
+<div class="container">
+    <div class="tile" onclick="openLink('https://docs.google.com/spreadsheets/d/e/2PACX-1vTSKbMxyBeOZ50sH0GnlKOQlE4cx10xHD9hzfOa99gJ6Mk2pAs5BasM0_A-r7U-rpNqXqTLIRDUhR-3/pubhtml?gid=2035309856&single=true')">
+        <img src="montgat.jpg" alt="جميع منتجات الشركة">
+        <h3>جميع منتجات الشركة</h3>
+    </div>
+    <div class="tile" onclick="openExternalLink('https://forms.gle/cNT6Qrc3anq2LmRh7')">
+        <img src="appmontgat.jpg" alt="اضافة منتج للشركة">
+        <h3>اضافة منتج للشركة</h3>
+    </div>
+    <div class="tile" onclick="openLink('https://docs.google.com/spreadsheets/d/e/2PACX-1vRK2S_9AzEzUTrcM6wTvR1xURsMLldrVmLU1NX-siWQoZz4cSCkPxHWHdQDT4tHxamGISc9cU436UuR/pubhtml?gid=641564385&single=true')">
+        <img src="metem.jpg" alt="موظفيني">
+        <h3>موظفيني</h3>
+    </div>
+    <div class="tile" onclick="openLink('https://docs.google.com/spreadsheets/d/e/2PACX-1vSYj4HGX6jhg5efblbAwmMuiWsO5qXO6d7m4lC__qmD3VTAZBTEcLPkwGqPPD5ELQDlLAYnKN6ImRzg/pubhtml?gid=1142858818&single=true')">
+        <img src="order.jpg" alt="جميع اوردرات موظفييني">
+        <h3>جميع اوردرات موظفييني</h3>
+    </div>
+    <div class="tile" onclick="openLink('https://forms.gle/hMmYChK2TGTm1bYw7')">
+        <img src="app1.jpg" alt="تسجيل موظف الي الشركه">
+        <h3>تسجيل موظف الي الشركه</h3>
+    </div>
+    <div class="tile" onclick="openLink('https://docs.google.com/spreadsheets/d/e/2PACX-1vRGbjJsiCbtPQ8hZEPS3By_a6pzffxv_YPhAMv37_QCRry-pqhGdSUiraA6QgMvzi9UOwSV5862RoMd/pubhtml?gid=1359755153&single=true')">
+        <img src="fkra.jpg" alt="اقتراحات المنتجات من الموظفين">
+        <h3>افكار منتجات جديدة من الموظفين</h3>
+    </div>
+    <div class="tile" onclick="openLink('https://docs.google.com/spreadsheets/d/e/2PACX-1vShV8E7dZn174n80RJJmog7hjj_6KFBqqS83-kKySh9_Q9xz4yN0zJkzvmAz3lVH50tVE8YriXetkKd/pubhtml?gid=1729712269&single=true')">
+        <img src="shkwa.jpg" alt="شكاوي الموظفين">
+        <h3>شكاوي الموظفين</h3>
+    </div>
+
+
+<div class="tile">
+    <img src="key.jpg" alt="فتح ادارة المتجر">
+    <h3>فتح ادارة المتجر</h3>
+    <div style="text-align: center; margin-top: 10px;">
+        <button onclick="openExternalLink('https://b3na.com/Login')" style="padding: 10px 20px; margin: 5px; background: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer;">
+            لوحة التحكم
+        </button>
+<button onclick="copyLink('اسم المستخدم : 1tard.shop@gmail.comكلمة المرور : @Tard2025')" style="padding: 10px 20px; margin: 5px; background: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+            نسخ بيانات السجيل
+        </button>
+    </div>
+</div>
+
+
+
+
+
+<div class="tile">
+    <img src="twzef.jpg" alt="نسخ رابط التوظيف">
+    <h3>نسخ رابط التوظيف</h3>
+    <div style="text-align: center; margin-top: 10px;">
+        <button onclick="copyLink('https://forms.gle/Jv5NwZC2P7iHb1KcA')" style="padding: 10px 20px; margin: 5px; background: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+            نسخ الرابط
+        </button>
+       
+    </div>
+</div>
+
+
+
+
+
+</div>
+</div>
+
+<div class="popup" id="popup">
+    <button class="close-btn" onclick="closePopup()">&times;</button>
+    <iframe id="iframe"></iframe>
+</div>
+
+<div class="footer">
+    &copy; 2025 جميع الحقوق محفوظة - 
+    <a href="https://www.facebook.com/omaressamelshemi/" target="_blank" rel="noopener noreferrer">
+        OMAR EL-SHEMI
+    </a>
+</div>
+
+
+<script>
+    function openLink(url) {
+        const popup = document.getElementById('popup');
+        const iframe = document.getElementById('iframe');
+        popup.style.display = 'flex';
+        iframe.src = url;
+    }
+
+    function closePopup() {
+        const popup = document.getElementById('popup');
+        const iframe = document.getElementById('iframe');
+        popup.style.display = 'none';
+        iframe.src = '';
+    }
+    function copyLink(link) {
+        navigator.clipboard.writeText(link).then(() => {
+            alert("تم نسخ الرابط إلى الحافظة!");
+        }).catch(err => {
+            alert("حدث خطأ أثناء النسخ: " + err);
+        });
+    }
+
+    function openExternalLink(link) {
+        window.open(link, "_blank");
+    }
+</script>
+
+</body>
+</html>
