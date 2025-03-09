@@ -4,236 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>منصة Tard</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            padding: 0;
+            font-family: 'Tajawal', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        }
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.2rem;
+            font-weight: 300;
+            line-height: 1.6;
+        }
+        .logo {
+            width: 200px;
+            margin-bottom: 2px;
+        }
+        .social-links {
+            margin-top: 30px;
+        }
+        .social-links a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+        .social-links a:hover {
+            color: #667eea;
+        }
+    </style>
 </head>
 <body>
-    <!-- Header -->
-    <header class="bg-dark text-white text-center py-4">
-        <h1>التدريب المجاني لموظفين منصة Tard</h1>
-        <p>نصائح واستراتيجيات لتسويق ناجح!</p>
-    </header>
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#articles">المقالات</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#videos">الفيديوهات التدريبية</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#offers">العروض والهدايا</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#leaderboard">لوحة المتصدرين</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#faq">أسئلة وأجوبة</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#poll">استطلاع الرأي</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#quotes">اقتباسات تحفيزية</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#rewards">المكافآت</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#tutorial">دروس تفاعلية</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#news">آخر الأخبار</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#successStories">قصص النجاح</a>
-                    </li>
-                </ul>
-            </div>
+    <div class="container">
+        <img src="photo_5818697645831604035_y-removebg-preview.png" alt="Logo" class="logo">
+        <h1>احنا وقفنا منصة Tard 😢</h1>
+        <p>احنا اسفين اننا مكناش قد ثقتكم فينا , واسفين ان الشغل والمنتجات معجبتكمش بس حاولنا علي قد ما نقدر نحسن من نفسنا ونحاول نساعدكو 😔.</p>
+        <div class="social-links">
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
         </div>
-    </nav>
+    </div>
 
-    <!-- Main Content -->
-    <main class="container my-5">
-        <!-- Articles Section -->
-        <section id="articles" class="mb-5">
-            <h2 class="text-center mb-4">تدريب للتسويق الإلكتروني</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <article class="card mb-4">
-                        <div class="card-body">
-                            <h3 class="card-title">نصائح للنجاح في إقناع العميل</h3>
-                            <p class="card-text">في هذا المقال، سنتحدث عن بعض النصائح التي يمكن أن تساعدك في إقناع العملاء بشراء منتجك. تعلم كيف تقدم قيمة حقيقية وتجعل العميل يشعر بالثقة في قرار الشراء.</p>
-                            <a href="https://blog.mostaql.com/effective-strategies-to-increase-sales/" class="btn btn-primary">اقرأ المزيد</a>
-                        </div>
-                    </article>
-                </div>
-                <div class="col-md-6">
-                    <article class="card mb-4">
-                        <div class="card-body">
-                            <h3 class="card-title">استراتيجيات التسويق الرقمي</h3>
-                            <p class="card-text">تعرف على أحدث استراتيجيات التسويق الرقمي التي يمكن أن تساعدك في الوصول إلى جمهور أوسع وزيادة مبيعاتك.</p>
-                            <a href="https://blog.mostaql.com/important-e-marketing-articles/" class="btn btn-primary">اقرأ المزيد</a>
-                        </div>
-                    </article>
-                </div>
-                <div class="col-md-6">
-                    <article class="card mb-4">
-                        <div class="card-body">
-                            <h3 class="card-title">كتاب لتعلم فنون التسويق</h3>
-                            <p class="card-text">الكتاب دا مفيد جدا في التسويق الالكتروني لانو هيديك خبرة تاهلك تشتغل صح ويخليك فوق الكل في الديجتال ماركتينج.</p>
-                            <a href="https://expandcart.com/wp-content/uploads/2021/06/%D9%83%D8%AA%D8%A7%D8%A8-%D8%A7%D9%84%D8%AA%D8%B3%D9%88%D9%8A%D9%82-%D8%A7%D9%84%D8%A5%D9%84%D9%83%D8%AA%D8%B1%D9%88%D9%86%D9%8A-%D9%85%D9%86-%D8%A7%D9%84%D8%A8%D8%AF%D8%A7%D9%8A%D8%A9-%D9%84%D9%84%D8%A5%D8%AD%D8%AA%D8%B1%D8%A7%D9%81-2021.pdf" class="btn btn-primary">اقرأ الكتاب</a>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Videos Section -->
-        <section id="videos" class="mb-5">
-            <h2 class="text-center mb-4">فيديوهات تدريبية</h2>
-            <div class="row">
-                <div class="col-md-6 mb-4">
-                    <div class="ratio ratio-16x9">
-                        <iframe src="https://www.youtube.com/embed/_C5J3CdSK8c" allowfullscreen></iframe>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-4">
-                    <div class="ratio ratio-16x9">
-                        <iframe src="https://www.youtube.com/embed/sHPlbBLLiIU" allowfullscreen></iframe>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-4">
-                    <div class="ratio ratio-16x9">
-                        <iframe src="https://www.youtube.com/embed/sbJUSPLzhQo" allowfullscreen></iframe>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-4">
-                    <div class="ratio ratio-16x9">
-                        <iframe src="https://www.youtube.com/embed/1-LL7ySbRUE" allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Offers Section -->
-        <section id="offers" class="mb-5">
-            <h2 class="text-center mb-4">العروض والهدايا</h2>
-            <div class="card text-center">
-                <div class="card-body">
-                    <h3 class="card-title">مكافآت أسبوعية!</h3>
-                    <p class="card-text">كل أسبوع، سيتم اختيار 20 موظف بشكل عشوائي للحصول على 3000 جنيه مكافأة!</p>
-                    <p class="card-text">بالإضافة إلى ذلك، هناك بونصات وعروض خاصة للعمل الجاد.</p>
-                    <button id="checkOffer" class="btn btn-success">تحقق إذا كنت الفائز</button>
-                    <p id="offerResult" class="mt-3"></p>
-                </div>
-            </div>
-        </section>
-
-        <!-- لوحة المتصدرين -->
-        <section id="leaderboard" class="mb-5">
-            <h2 class="text-center mb-4">لوحة المتصدرين</h2>
-            <ul id="leaderboardList" class="list-group"></ul>
-        </section>
-
-        <!-- أسئلة وأجوبة -->
-        <section id="faq" class="mb-5">
-            <h2 class="text-center mb-4">أسئلة وأجوبة</h2>
-            <div class="accordion">
-                <div class="accordion-item">
-                    <button class="accordion-button">كيف يمكنني تحسين مبيعاتي؟</button>
-                    <div class="accordion-content">
-                        <p>ركز على فهم احتياجات العميل وقدم حلولًا تلبي هذه الاحتياجات.</p>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <button class="accordion-button">ما هي أفضل استراتيجيات التسويق؟</button>
-                    <div class="accordion-content">
-                        <p>استخدم التسويق عبر وسائل التواصل الاجتماعي والتسويق بالمحتوى.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- استطلاع الرأي -->
-        <section id="poll" class="mb-5">
-            <h2 class="text-center mb-4">استطلاع الرأي</h2>
-            <p>اي اكتر حاجه شايفها صعبة في التسويق؟</p>
-            <form id="pollForm">
-                <label><input type="radio" name="poll" value="جذب العملاء"> جذب العملاء</label><br>
-                <label><input type="radio" name="poll" value="تحسين المبيعات"> تحسين المبيعات</label><br>
-                <label><input type="radio" name="poll" value="إدارة الوقت"> إدارة الوقت</label><br>
-                <button type="submit" class="btn btn-primary mt-2">تصويت</button>
-            </form>
-            <p id="pollResult" class="mt-3"></p>
-        </section>
-
-        <!-- اقتباسات تحفيزية -->
-        <section id="quotes" class="mb-5">
-            <h2 class="text-center mb-4">اقتباسات تحفيزية</h2>
-            <p id="quoteText" class="text-center fs-4"></p>
-            <button id="newQuote" class="btn btn-success d-block mx-auto">اقتباس جديد</button>
-        </section>
-
-        <!-- المكافآت -->
-        <section id="rewards" class="mb-5">
-            <h2 class="text-center mb-4">المكافآت</h2>
-            <button id="checkReward" class="btn btn-warning d-block mx-auto">تحقق من المكافأة</button>
-            <p id="rewardResult" class="text-center mt-3"></p>
-        </section>
-
-        <!-- دروس تفاعلية -->
-        <section id="tutorial" class="mb-5">
-            <h2 class="text-center mb-4">دروس تفاعلية</h2>
-            <p id="tutorialText" class="text-center fs-5"></p>
-            <button id="nextStep" class="btn btn-info d-block mx-auto">التالي</button>
-        </section>
-
-        <!-- آخر الأخبار -->
-        <section id="news" class="mb-5">
-            <h2 class="text-center mb-4">آخر الأخبار</h2>
-            <ul class="list-group">
-                <li class="list-group-item">تقدر دلوقتي تتواصل معانا عن طريق رقمنا علي واتساب 01271415371.</li>
-                <li class="list-group-item">استنو عروض رمضان.</li>
-                <li class="list-group-item">نتائج المسابقة الشهرية ستعلن قريبًا.</li>
-            </ul>
-        </section>
-
-        <!-- قصص النجاح -->
-        <section id="successStories" class="mb-5">
-            <h2 class="text-center mb-4">قصص النجاح</h2>
-            <div class="card mb-3">
-                <div class="card-body">
-                    <h3 class="card-title">عمر: زيادة المبيعات بنسبة 46%</h3>
-                    <p class="card-text">استخدم عمر استراتيجيات تسويقية مبتكرة لزيادة مبيعاته.</p>
-                </div>
-            </div>
-            <div class="card mb-3">
-                <div class="card-body">
-                    <h3 class="card-title">مازن احمد: تحقيق أعلى مبيعات في الشهر</h3>
-                    <p class="card-text">مازن حقق أعلى مبيعات في الشهر باستخدام التسويق عبر وسائل التواصل الاجتماعي.</p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-3">
-        <p>جميع الحقوق محفوظة &copy; 2025 Tard</p>
-    </footer>
-
-    <!-- Bootstrap JS and Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JS -->
-    <script src="scripts.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </body>
 </html>
